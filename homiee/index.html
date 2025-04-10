@@ -10,3 +10,63 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+<!-- Mainul (40% contribution) -->
+<header role="banner" class="shadow-sm">
+  <nav class="navbar navbar-expand-lg bg-white container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-home"></i><span>Homiee</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarLinks">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="universities.html" class="nav-link">Universities</a></li>
+        <li class="nav-item"><a href="booking.html" class="nav-link">Book Now</a></li>
+      </ul>
+      <a href="booking.html" class="cta-button ms-3">Book Now</a>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="mb-3">Find Your Perfect <span class="text-orange">Student Accommodation</span></h1>
+          <p class="lead mb-4">Discover comfortable housing near your university campus</p>
+          <div class="input-group mb-3">
+            <input type="text" id="university-search" class="form-control" placeholder="Search by university..." list="universities" />
+            <button id="search-btn" class="cta-button"><i class="fas fa-search"></i></button>
+          </div>
+          <datalist id="universities">
+            <option value="Ulster University London">
+            <option value="London Metropolitan University">
+            <option value="London South Bank University">
+          </datalist>
+          <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
+            <a href="universities.html" class="cta-button">Browse Universities</a>
+            <a href="booking.html" class="cta-button secondary">Quick Booking</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1529408632839-a54952c491e5" alt="Students enjoying their accommodation" class="img-fluid rounded shadow" />
+            <p id="hero-image-desc" class="sr-only">Group of students laughing in a modern apartment common area</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-4">Featured <span>Properties</span></h2>
+      <div class="row properties">
+        <!-- Property cards will be loaded dynamically via JS -->
+      </div>
+    </div>
+  </section>
+</main>
