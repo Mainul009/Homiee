@@ -1,1 +1,27 @@
+<!-- Anisha (30% contribution) -->
+                        <option value="london-met">London Metropolitan University</option>
+                        <option value="south-bank">London South Bank University</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="move-date">Move-in Date*</label>
+                    <input type="date" id="move-date" required min="<?= date('Y-m-d') ?>">
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="special-requests">Special Requests</label>
+                    <textarea id="special-requests"></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">Submit Booking</button>
+            </form>
+        </section>
+    </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
