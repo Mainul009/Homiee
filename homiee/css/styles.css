@@ -1,0 +1,37 @@
+/* Universities Page Specific Styles */
+/* Anisha (30% contribution) */
+.universities {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.university-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.university-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.university-info {
+    padding: 1.5rem;
+}
+
+.university-info h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.university-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
