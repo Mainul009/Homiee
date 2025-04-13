@@ -1,3 +1,27 @@
+// Mainul (30% contribution)
+$(document).ready(function() {
+    // Form validation
+    $('#booking-form').on('submit', function(e) {
+        e.preventDefault();
+        if (validateForm()) {
+            saveBookingData();
+            alert('Booking submitted successfully!');
+            this.reset();
+        }
+    });
+
+    // Real-time validation
+    $('#booking-form input, #booking-form select').on('input change', function() {
+        validateField($(this));
+    });
+
+    function validateForm() {
+        let isValid = true;
+        $('#booking-form [required]').each(function() {
+            if (!validateField($(this))) {
+                isValid = false;
+            }
+        });
 // Anisha (30% contribution)
             error.text('Please select a future date');
             return false;
