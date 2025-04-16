@@ -22,6 +22,31 @@ $(document).ready(function() {
                 isValid = false;
             }
         });
+// Saima (30% contribution)
+        return isValid;
+    }
+
+    function validateField(field) {
+        const error = field.next('.error-message');
+        error.text('');
+        
+        if (field.prop('required') && !field.val()) {
+            error.text('This field is required');
+            return false;
+        }
+        
+        if (field.attr('type') === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.val())) {
+            error.text('Please enter a valid email');
+            return false;
+        }
+        
+        if (field.attr('type') === 'tel' && !/^[0-9]{10,15}$/.test(field.val())) {
+            error.text('Please enter a valid phone number');
+            return false;
+        }
+        
+        if (field.attr('type') === 'date' && new Date(field.val()) < new Date()) {
+        
 // Anisha (30% contribution)
             error.text('Please select a future date');
             return false;
