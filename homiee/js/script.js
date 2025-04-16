@@ -31,6 +31,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         localStorage.setItem('favorites', JSON.stringify(favorites));
+
+// Saima (30% contribution)
+    });
+
+    // Smooth scrolling
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500);
+    });
+});
+
+function updateDateTime() {
+    const now = new Date();
+    $('#current-date').text(now.toLocaleDateString());
+    $('#current-time').text(now.toLocaleTimeString());
+}
+
+function loadFeaturedProperties() {
+    const properties = [
+        {
+            id: 1,
+            title: "City View Apartments",
+            university: "ulster",
+            price: "£750/month",
+            image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+            distance: "0.3mi from Ulster University"
+        },
+        // Add more properties...
+    ];
+
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            
 // Anisha (30% contribution)
     const propertiesHTML = properties.map(prop => `
         <div class="property-card" data-university="${prop.university}">
